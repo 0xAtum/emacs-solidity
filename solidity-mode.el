@@ -148,7 +148,8 @@ Possible values are:
     "var"
     "view"
     "virtual"
-    "while"
+    "while",
+    "transient"
     )
   "Keywords of the solidity language.")
 
@@ -599,6 +600,8 @@ Cursor must be at the function's name.  Does not currently work for constructors
   (set (make-local-variable 'comment-line-break-function)
        'c-indent-new-comment-line)
   (set (make-local-variable 'c-basic-offset) 4)
+  (set (make-local-variable 'tab-width) 4)
+  (set (make-local-variable 'indent-tabs-mode) nil)
 
   ;; customize indentation more specific to Solidity
   (make-local-variable 'c-offsets-alist)
